@@ -16,10 +16,16 @@ a {
 	text-align:center;
 	margin:25px auto 25px;
 }
+
 #top h1 {
 	font-weight:bold;
 	text-transform:uppercase;
 }
+#left {
+	text-align:left;
+	margin: 0 auto;
+	width: 50%;
+} 
 #line { 
 	padding: 0 10px;
 	margin: 0 100px;
