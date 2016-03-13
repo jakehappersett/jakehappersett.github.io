@@ -5,6 +5,7 @@ body {
 	font-family:sans-serif;
 	font-size:14px;
 }
+
 a {
 	text-decoration:none;
 }
@@ -20,6 +21,8 @@ a {
 #top h1 {
 	font-weight:bold;
 	text-transform:uppercase;
+	color:#484C61;
+	
 }
 #left {
 	text-align:left;
