@@ -5,7 +5,7 @@ html {
 }
 
 /*vertical menu on small screens*/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
 	#list li { 
 		width:100%;	
 		margin-top:50px;
@@ -20,7 +20,15 @@ html {
 		text-align:cener;
 	}
 }
+/*stupid blinking rectangle*/
+#blink {
+  animation: blinker 1s linear infinite;
+}
 
+@keyframes blinker {  
+  50% { opacity: 0.0; }
+}
+/*important stuff*/
 a {
 	text-decoration:none;
 }
@@ -34,7 +42,6 @@ a {
 }
 #top h1 {
 	font-weight:bold;
-	text-transform:uppercase;
 	color:#484C61;
 	
 }
