@@ -13,11 +13,10 @@ html {
 
 	#list li a{
 		position:relative;
-		margin-top:500px;
 	}
 	#main {
-		margin:30px auto 0;
-		text-align:cener;
+		margin:auto;
+		text-align:center;
 	}
 }
 /*stupid blinking rectangle*/
@@ -75,4 +74,14 @@ a {
 	color:#484C61;
 	box-shadow:6px 7px #383A4A;
 	transition:all .35s;
+}
+#back {
+	font-size:1em;
+	color:#484C61;
+	text-align:center;
+	font-weight:lighter;
+}
+#back:hover {
+	color:#484C61;
+	font-weight:bold;
 }
