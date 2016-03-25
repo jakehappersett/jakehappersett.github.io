@@ -1,9 +1,24 @@
 html { 
 	background-color:#F6F7F8;
-}
-body {
 	font-family:sans-serif;
 	font-size:14px;
+}
+
+/*vertical menu on small screens*/
+@media only screen and (max-width: 768px) {
+	#list li { 
+		width:100%;	
+		margin-top:50px;
+	}
+
+	#list li a{
+		position:relative;
+		margin-top:500px;
+	}
+	#main {
+		margin:30px auto 0;
+		text-align:cener;
+	}
 }
 
 a {
@@ -17,7 +32,6 @@ a {
 	text-align:center;
 	margin:25px auto 25px;
 }
-
 #top h1 {
 	font-weight:bold;
 	text-transform:uppercase;
