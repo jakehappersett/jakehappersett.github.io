@@ -19,7 +19,7 @@ html {
 		text-align:center;
 	}
 }
-/*stupid blinking rectangle*/
+/* blinking*/
 #blink {
   animation: blinker 1s linear infinite;
 }
@@ -85,3 +85,10 @@ a {
 	color:#484C61;
 	font-weight:bold;
 }
+#links li {
+	font-weight:bold;
+	text-transform:uppercase;
+	color:#C4C4C4;
+	padding:10px;
+	list-style-type: none;
+}	
