@@ -41,7 +41,7 @@ a {
 }
 #top h1 {
 	font-weight:bold;
-	color:#484C61;
+	color:#323442;
 	
 }
 #left {
@@ -92,3 +92,28 @@ a {
 	padding:10px;
 	list-style-type: none;
 }	
+
+#footertext {
+    text-decoration: none;
+    margin: 25px auto 25px;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: .7em;
+    color: #323442;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+body {
+    height: 100%;
+    margin: auto;
+}
+
+#center {
+    text-align: center;
+    width: 100%;
+}
