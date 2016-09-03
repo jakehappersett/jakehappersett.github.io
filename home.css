@@ -21,11 +21,11 @@ html {
 }
 /* blinking*/
 #blink {
-  animation: blinker 1s linear infinite;
+  	animation: blinker 1s linear infinite;
 }
 
 @keyframes blinker {  
-  50% { opacity: 0.0; }
+  	50% { opacity: 0.0; }
 }
 /*important stuff*/
 a {
@@ -59,6 +59,7 @@ a {
 #list li {
 	display:inline-block;
 	padding:0 6px;
+	/*width: 33%;*/
 }
 #list li a {
 	font-weight:bold;
