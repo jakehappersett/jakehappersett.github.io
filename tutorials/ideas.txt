@@ -1,0 +1,3 @@
+- awk grep sed
+- taking a long complicated command and decomposing it to understand what each individual part is doing 
+- making dwm bar in C
