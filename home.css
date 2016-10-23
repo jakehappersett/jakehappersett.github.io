@@ -79,8 +79,17 @@ a {
 	transition:all .35s;	
 
 }
-.blue li a:hover {
+.purple a:hover{
+	border: 15px solid #880e4f !important;
 }
+
+.yellow a:hover{
+	border: 15px solid #FFEB3B !important;
+}
+.blue a:hover{
+	border: 15px solid #009688 !important;
+}
+
 
 #back {
 	font-size:1em;
