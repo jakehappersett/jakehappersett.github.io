@@ -171,3 +171,7 @@ code {
 .content {
   min-height: calc(100vh - 30vh);
 }
+#block{
+    display: block;
+    text-align:left;
+}
