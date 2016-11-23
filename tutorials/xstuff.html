@@ -1,0 +1,82 @@
+<!DOCTYPE HTML> 
+<html> 
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="author"  content="Jake" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="../home.css" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css">
+		<title>Links</title>
+	</head> 
+	<body> 
+		<header id="top"> 
+			<h1>jake@happersett: ~ /tutorials/xstuff $ <span id="blink">_</span> </h1> 
+			<a id="back" href="../links.html">↩ cd ..</a>
+			<hr id="line">
+		</header>
+		<main>
+            <h2 id='top'>Xstuff</h2>
+            <p> Okay, you've just set up your shiny new unix box.  You read followed the directions on the archwiki and installed the xorg-server package, your video driver and a fancy new window manager (try dwm, seriously). Now what?</p>
+            
+            <p>Well, there's a lot to do still.  In this article I want to go over a few of the xorg configuration files that allow you to customize the look and feel of your terminals.  Specifically: the <b>Xdefaults</b>, <b>Xresources</b> and <b>xinitrc</b> files. Lets start:</p>
+            
+            <p> What do these files do?</p>
+            
+            <p> First <b>xinitrc:</b></p>
+            <p> Xinitrc is simple scrpit that is read by X every time you start a new X session.  It is mostly used to start window managers (and DEs) and load custom configuration files. For noobs, default settings should be copied to the users home directory via:</p>
+            <pre> <code>$ cp /etc/X11/xinit/xinitrc ~/.xinitrc</code></pre>
+            
+            <p> A more in depth look at the defaults can be found elsewhere, for the scope of this tutorial its more important to understand what this files is doing.  If we want to start something when we log in, we use: </p>
+            <pre><code>exec *whateverWeWantToStart* </code></pre>
+            
+            <p> So for dwm we would take out the "twm" line and put</p>
+            <p><code>exec dwm </code></p>
+            
+            <p>Easy huh?</p>
+            
+            <p>Okay - lets talk <b> Xdefaults:</b></p>
+            
+            <p> Back in the day, when a Xlib program was started in an X server session it would read the contents of the <code>~/.Xdefaults</code> file.  This file was re-read every time a new Xlib application was opened. Generally a Xlib program is anything that starts with "X", i.e. Xterm, Xpdf - notable exception being rxvt-unicode.</p>
+            
+            <p>This method was innefficient and has since been superseded by the <code>~/.Xresources</code> file which loads it's contents into the RESOURCE_MANAGER property of the X11 root window upon starting X.  This is worth mentioning because many old tutorials will tell you to use the Xdefaults file to configure Xlib applications.  Just know that anything you put in the Xdefaults file can be placed in the Xresoruces file to achieve the same effect. </p>
+            
+            <p>So what do we do with the <b>Xresources</b> file?</p>
+            
+            <p>Xresources allows many customizations to the applications running directly on the X server.  Anything you run in your terminal (including the terminal itself) will gather properties from the Xresources file. 
+            </p>
+            
+            <p>Xresources follows this basic syntax:</p> 
+            <pre><code>name.Class.resource: value</code></pre>
+            <p>Where <code>name</code> is the application name, <code>class</code> is the classification used to group the resources,and <code>resource</code> is what is actually being changed. A wildcard ('*') can be used to signify that all Xapplications should use this.
+            </p>
+            <p>For example, taken from my Xresources, this will set up the default background and foreground colors for all my terminals </p>
+            <pre> <code>*foreground: #D7D0C7 <br> *background: #151515
+                </code></pre>
+            <p>Setting specific application settings is easy as well!</p>
+            <pre> <code>URxvt.font: xft:Hack:size=9<br> URxvt.scrollBar: false<br> URxvt.cursorColor: #ff8939
+                </code></pre>
+            
+            <p> Lets push those changes</p>
+            <pre><code>$ xrdb ~/.Xresources</code></pre>
+            
+            <p>Sweet, now lets set up our xinitrc to merge these by default when you start an X session. Put this in your xinitrc <i>(from the archwiki)</i>:</p>
+            <pre><code>[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources</code></pre>
+            
+            <p> Xresources usese xrdb to load these files into the RESOURCE_MANAGER property.  This is good for us as it allows us to add in settings without actually editing our Xresouces, among other things <i>(see the manpage for said other things)</i>. For Example:</p>
+            <pre><code>$ xrdb -merge ~/.Xdefaults</code></pre>
+            
+            <p> That just added our old, outdated Xdefaults to our super rad Xresources file! Cool!</p>
+            
+            <p> This all just scratches the surface as far as what these configuration files can do. This is simply a launching point, read the manpages and the archwiki for more in depth examples. </p>
+            <br>
+        </main>
+     <footer>
+            <hr id="line">
+            <div id="center">
+                <a href="http://www.wtfpl.net/txt/copying/" id="footertext"> // WTFPL //</a>
+                <a href="mailto:jake.happersett@gmail.com" target="_top" id="footertext"> CONTACT //</a>
+            </div>
+        </footer>  
+	</body>
+</html>
