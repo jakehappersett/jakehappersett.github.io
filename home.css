@@ -112,13 +112,18 @@ a {
 	color:#323442;
 	list-style-type: none;
     text-decoration:none;
+    padding: 10px 20%;
 }	
 #links li a{
     font-weight:bold;
 	text-transform:uppercase;
 	color:#323442;
 	padding:10 px;
-	letter-spacing: 5px;
+	letter-spacing: 3px;  
+}
+#links li a:hover{
+    letter-spacing: 4px;
+    transition:all .35s;
 }
 #footertext {
     text-decoration: none;

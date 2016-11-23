@@ -37,7 +37,7 @@
             
             <p>Okay - lets talk <b> Xdefaults:</b></p>
             
-            <p> Back in the day, when a Xlib program was started in an X server session it would read the contents of the <code>~/.Xdefaults</code> file.  This file was re-read every time a new Xlib application was opened. Generally a Xlib program is anything that starts with "X", i.e. Xterm, Xpdf - notable exception being rxvt-unicode.</p>
+            <p> Back in the day, when a Xlib program was started in an X server session it would read the contents of the <code>~/.Xdefaults</code> file.  This file was re-read every time a new Xlib application was opened. Generally a Xlib program is anything that starts with "X", i.e. Xterm, Xpdf <i>(notable exception being rxvt-unicode)</i> or runs from the terminal.</p>
             
             <p>This method was innefficient and has since been superseded by the <code>~/.Xresources</code> file which loads it's contents into the RESOURCE_MANAGER property of the X11 root window upon starting X.  This is worth mentioning because many old tutorials will tell you to use the Xdefaults file to configure Xlib applications.  Just know that anything you put in the Xdefaults file can be placed in the Xresoruces file to achieve the same effect. </p>
             
