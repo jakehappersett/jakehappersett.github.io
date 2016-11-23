@@ -162,7 +162,7 @@ pre {
     background-color: #151515;
     color: #D7D0C7;
     white-space: pre;
-    margin: auto 5em;
+    margin: auto 10%;
 }
 code {
     font: monospace;
