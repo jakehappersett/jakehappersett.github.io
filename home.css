@@ -122,7 +122,8 @@ a {
 	letter-spacing: 3px;  
 }
 #links li a:hover{
-    letter-spacing: 4px;
+    font-weight: bolder;
+    color:black;
     transition:all .35s;
 }
 #footertext {
