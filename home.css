@@ -170,6 +170,13 @@ pre {
     white-space: pre;
     margin: auto 10%;
 }
+
+img{
+    display: block;
+    width:50%;
+    height:25%;
+    margin: 0 auto;
+}
 code {
     font: monospace;
 }
